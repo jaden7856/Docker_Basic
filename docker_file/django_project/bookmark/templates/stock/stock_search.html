@@ -1,0 +1,16 @@
+<title>Stock Searched List</title>
+
+
+<div id="masthead">
+    <tr>
+        <td><h3>검색 한 종목(hello)</h3></td>
+        {% for stock in stocks %}
+            <form action="detail" method="post">
+                <input type="submit" name="name" value="{{ stock.name }}"
+                        onclick="location.href='{% url 'bookmark:stock_detail' %}'">
+            </form>
+            <br><br>
+        {% endfor %}
+    </tr>
+</div>
+
